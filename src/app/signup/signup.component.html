@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="col-3">
+
+    </div>
+<form [formGroup]="signup">
+    <div class="mb-3 mt-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="name" formControlName="name" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+        @if('name,error?.required'){
+            <span text-danger>This field is required</span>
+        }
+      </div>
+    <div class="mb-3">
+        <label for="regno" class="form-label">RegNo:</label>
+        <input type="regno" formControlName="regno" class="form-control" id="regno" placeholder="Enter RegNo" name="regno">
+      </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" formControlName="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" [disabled]="signup.invalid"(click)="submit()" class="btn btn-primary">Submit</button>
+  </form>
+</div>

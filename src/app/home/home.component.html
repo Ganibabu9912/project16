@@ -1,0 +1,19 @@
+<h1>API Data</h1>
+@for (item of data; track $index){
+    <table>
+        <tr>
+            <th>S1.No</th>
+            <th>title</th>
+            <th>body</th>
+        </tr>
+        @for (item of data; track $index){
+            <tr>
+                <td>{{item.ProgramName}}</td>
+                <td>{{item.StudentName}}</td>
+                <td>{{item.RegdNo}}</td>
+            </tr>
+        }
+
+    </table>
+}
+
